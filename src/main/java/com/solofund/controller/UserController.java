@@ -20,17 +20,17 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getStudents(){
+    public List<User> getUsers(){
         return  userService.getUsers();
     }
 
     @PostMapping
-    public void registerNewStudent(@RequestBody User user){
+    public void registerNewUser(@RequestBody User user){
         userService.addUser(user);
     }
 
     @DeleteMapping(path = "{userID}")
-    public void deleteStudent(@PathVariable("userID") Long id){
+    public void deleteUser(@PathVariable("userID") Long id){
         userService.deleteUser(id);
     }
 
